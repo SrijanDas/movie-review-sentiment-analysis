@@ -2,9 +2,19 @@
 
 The program takes movie name as input then it scrapes the reviews from IMDB website and using the pretrained SVC model it predicts the sentiment of the reviews wheather it is positive or negative. After that it calculates the percentage of positive and negative reviews and upon compairing the two percentages it gives the final sentiment of that movie.
 
+## Datasets
+
+- [IMDB 50K Movie Reviews](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
+
+- [IMDB Movie IDs](https://drive.google.com/drive/folders/1y9J99zxIV4jqE8e_Pp_p4R6oEARKkaXA?usp=sharing)
+
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](screenshots/positive.png)
+
+![App Screenshot2](screenshots/Figure_1.png)
+
+![App Screenshot2](screenshots/Figure_2.png)
 
 ## Run Locally
 
