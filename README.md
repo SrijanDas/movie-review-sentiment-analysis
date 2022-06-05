@@ -21,13 +21,13 @@ The program takes movie name as input then it scrapes the reviews from IMDB webs
 Clone the project
 
 ```bash
-  git clone https://github.com/SrijanDas/movie-review-sentiment-analysis.git
+  git clone https://github.com/SrijanDas/movie-sentiment-analysis.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd movie-review-sentiment-analysis
+  cd movie-sentiment-analysis
 ```
 
 Install dependencies
@@ -41,6 +41,8 @@ Start the program
 ```bash
   python predict.py
 ```
+
+That's it 👍
 
 ## Thank you 😃
 
