@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore") 
 
+
 def load_model():
     print("\nLoading the model please wait...", end="")
     time.sleep(1)
