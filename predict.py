@@ -55,7 +55,7 @@ def scrape_reviews(movie_id):
 
     if len(reviews) <= 0:
         print("Something went wrong!")
-        get_movie_id()
+        # get_movie_id()
     return reviews
 
 
