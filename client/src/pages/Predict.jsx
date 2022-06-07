@@ -41,9 +41,9 @@ function Predict() {
             </h1>
             <p className="mb-8 leading-relaxed"> Rating: {data.rating}</p>
             <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
-              Positive Reviews: {data.pos_percentage}
+              Positive Reviews: {data.pos_percentage} %
               <br />
-              Negative Reviews: {data.neg_percentage}
+              Negative Reviews: {data.neg_percentage} %
               <br />
               Sentiment: {data.sentiment}
             </p>
