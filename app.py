@@ -10,7 +10,10 @@ CORS(app)
 
 # create an instance of the Cinemagoer class
 ia = Cinemagoer()
+
+# loading pretrained svc model
 tfidf, svc = load_model()
+
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -75,8 +78,8 @@ def predict(movie_id):
             final_sentiment = "Negative"
 
         return jsonify({'sentiment': final_sentiment,
-                        'pos_percentage': str('{:04.2f}'.format(pos_percentage)) + '%',
-                        'neg_percentage': str('{:04.2f}'.format(neg_percentage)) + '%',
+                        'pos_percentage': str('{:04.2f}'.format(pos_percentage)),
+                        'neg_percentage': str('{:04.2f}'.format(neg_percentage)),
                         "title": title,
                         "movie_id": movie_id,
                         "cover_url": cover_url,
