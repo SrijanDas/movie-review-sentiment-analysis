@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MovieIcon from "../assets/movies-icon.jpg";
 
 function Footer() {
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 body-font bg-slate-200 mt-10">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <Link
+        {/* <Link
           to="/"
           className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
         >
@@ -18,7 +17,7 @@ function Footer() {
             viewBox="0 0 24 24"
           />
           <span className="ml-3 text-xl">Movie Sentiment Analysis</span>
-        </Link>
+        </Link> */}
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2022 MSA —
           <Link

@@ -26,22 +26,13 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="flex flex-1 flex-col justify-center">
       <SearchForm
         input={input}
         setInput={setInput}
         handleSubmit={handleSubmit}
         loading={loading}
       />
-      {/* <Link
-        to="/"
-        className="list-group-item list-group-item-action"
-        aria-current="true"
-      >
-        {movies.map((movie) => (
-          <MovieListItem key={movie.movie_id} movie={movie} />
-        ))}
-      </Link> */}
       {movies.length > 0 && (
         <SearchResults searchTerm={searchTerm} movies={movies} />
       )}
