@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from flask_cors import CORS
 from imdb import Cinemagoer
 from predict import scrape_reviews, load_model
@@ -47,7 +47,8 @@ def predict(movie_id):
 
         t_movie_id = "tt"+str(movie_id)
         reviews = scrape_reviews(t_movie_id)
-
+        if len(reviews) <= 0:
+            abort(500)
         # predictions = []
         positive_count = 1
         negative_count = 1
