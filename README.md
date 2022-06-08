@@ -10,6 +10,8 @@ The program takes movie name as input then it scrapes the reviews from IMDB webs
 
 ## Screenshots
 
+### Command-line-application
+
 ![App Screenshot](screenshots/positive.png)
 
 ![App Screenshot2](screenshots/Figure_1.png)
@@ -17,6 +19,10 @@ The program takes movie name as input then it scrapes the reviews from IMDB webs
 ![App Screenshot2](screenshots/Figure_2.png)
 
 ## Run Locally
+
+The project has a command-line-application as well as a webapp.Below you can find how to run them bothe seperately.
+
+### I. Run the "Command-line-application"
 
 Clone the project
 
@@ -30,19 +36,75 @@ Go to the project directory
   cd movie-sentiment-analysis
 ```
 
+Go to the cmd-app directory
+
+```bash
+  cd command-line-application
+```
+
 Install dependencies
 
 ```bash
   pip install -r requirements.txt
 ```
 
-Start the program
+Run the command-line program
 
 ```bash
   python predict.py
 ```
 
-That's it 👍
+### II. Run the "Webapp"
+
+For running the webapp we need to start the backend server as well as the client server.
+
+Clone the project
+
+```bash
+  git clone https://github.com/SrijanDas/movie-sentiment-analysis.git
+```
+
+Go to the project directory
+
+```bash
+  cd movie-sentiment-analysis
+```
+
+Go to backend server directory
+
+```bash
+  cd server
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Run the backend-server
+
+```bash
+  python app.py
+```
+
+Now the backend server should be running on `http://localhost:5000/` and we are all ready to setup the client server.
+
+To run the client server navigate to the `movie-sentiment-analysis\client` folder and run the following commands.
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Run the client-server
+
+```bash
+  npm start
+```
+
+That's it. The client server should now be running on `http://localhost:3000`
 
 ## Thank you 😃
 
