@@ -3,7 +3,7 @@ import re
 import string
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-import pandas as pd
+# import pandas as pd
 from collections import Counter
 
 nltk.download('wordnet')
@@ -14,17 +14,17 @@ nltk.download('omw-1.4')
 wordnet_lem = WordNetLemmatizer()
 stop_words = stopwords.words()
 
-dt = pd.read_csv("./data/dt.csv")
-cnt = Counter()
-for text in dt["no_sw"].values:
-    for word in text.split():
-        cnt[word] += 1
-FREQWORDS = set([w for (w, wc) in cnt.most_common(10)])
+# dt = pd.read_csv("./data/dt.csv")
+# cnt = Counter()
+# for text in dt["no_sw"].values:
+#     for word in text.split():
+#         cnt[word] += 1
+# FREQWORDS = set([w for (w, wc) in cnt.most_common(10)])
 
 
-def remove_freqwords(text):
-    """custom function to remove the frequent words"""
-    return " ".join([word for word in str(text).split() if word not in FREQWORDS])
+# def remove_freqwords(text):
+#     """custom function to remove the frequent words"""
+#     return " ".join([word for word in str(text).split() if word not in FREQWORDS])
 
 
 def clean_text(text):
@@ -87,6 +87,6 @@ def clean_text(text):
     text = re.sub("he’s'", 'he is', text)
     text = re.sub('there’s', 'there is', text)
     text = ' '.join([word for word in text.split() if word not in stop_words])
-    text = remove_freqwords(text)
+    # text = remove_freqwords(text)
     text = wordnet_lem.lemmatize(text)
     return text
