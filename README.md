@@ -8,7 +8,7 @@ The program takes movie name as input then it scrapes the reviews from IMDB webs
 
 - [IMDB Movie IDs](https://drive.google.com/drive/folders/1y9J99zxIV4jqE8e_Pp_p4R6oEARKkaXA?usp=sharing)
 
-## Screenshots
+<!-- ## Screenshots
 
 ### Command-line-application
 
@@ -16,7 +16,7 @@ The program takes movie name as input then it scrapes the reviews from IMDB webs
 
 ![App Screenshot2](screenshots/Figure_1.png)
 
-![App Screenshot2](screenshots/Figure_2.png)
+![App Screenshot2](screenshots/Figure_2.png) -->
 
 ## Run Locally
 
