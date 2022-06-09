@@ -1,4 +1,4 @@
-# [Movie Sentiment Analysis](https://mrsa.netlify.app/)
+# [Movie Review Sentiment Analysis](https://mrsa.netlify.app/)
 
 The program takes movie name as input then it scrapes the reviews from IMDB website and using the pretrained SVC model it predicts the sentiment of the reviews wheather it is positive or negative. After that it calculates the percentage of positive and negative reviews and upon compairing the two percentages it gives the final sentiment of that movie.
 
