@@ -33,12 +33,19 @@ function SearchForm({ input, setInput, handleSubmit, loading }) {
           />
           <button
             type="submit"
-            className={`flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg ${
+            className={`flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded ${
               loading && "cursor-not-allowed"
             }`}
             disabled={loading}
           >
-            {loading ? <Spinner color="white" size={5} /> : "Let's Go"}
+            {loading ? (
+              <div className="flex gap-2 items-center">
+                <Spinner color="white" />
+                <span className="text-lg">Searching...</span>
+              </div>
+            ) : (
+              <span className="text-lg">Let's Go</span>
+            )}
           </button>
         </form>
       </div>

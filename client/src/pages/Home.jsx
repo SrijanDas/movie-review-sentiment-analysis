@@ -8,6 +8,7 @@ function Home() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [searchTerm, setsearchTerm] = useState("");
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -19,9 +20,16 @@ function Home() {
       })
       .catch((err) => {
         console.log(err);
+        setError(true);
+        console.log(error);
       });
-    setsearchTerm(input);
-    setInput("");
+
+    if (movies.length > 0) {
+      setsearchTerm(input);
+      setInput("");
+    } else {
+      setError(true);
+    }
     setLoading(false);
   };
 
@@ -35,6 +43,14 @@ function Home() {
       />
       {movies.length > 0 && (
         <SearchResults searchTerm={searchTerm} movies={movies} />
+      )}
+
+      {error && (
+        <div className="mx-auto text-center p-4 bg-red-200 text-red-900 text-lg font-semibold rounded">
+          Something went wrong 😟
+          <br />
+          Please try searching again...
+        </div>
       )}
     </div>
   );

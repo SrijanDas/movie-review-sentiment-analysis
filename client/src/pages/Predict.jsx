@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import Navbar from "../components/Navbar";
-import ShowError from "../components/ShowError";
+import ShowError from "../components/ShowErrorPage";
 
 function Predict() {
   const { movieId } = useParams();

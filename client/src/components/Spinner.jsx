@@ -1,9 +1,9 @@
 import React from "react";
 
-function Spinner({ color = "black", size = 5 }) {
+function Spinner({ color = "black", size = "5" }) {
   return (
     <svg
-      className={`animate-spin mx-auto h-${size} w-${size} text-${color} text-lg`}
+      className={`animate-spin mx-auto h-${size} w-${size} text-${color}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
