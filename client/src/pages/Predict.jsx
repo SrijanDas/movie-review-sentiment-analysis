@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import Navbar from "../components/Navbar";
 import ShowError from "../components/ShowErrorPage";
+import ImdbLogo from "../assets/IMDB_Logo.png";
 
 function Predict() {
   const { movieId } = useParams();
@@ -48,7 +49,16 @@ function Predict() {
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
                 {data.title}
               </h1>
-              <p className="mb-8 leading-relaxed">IMDB Rating: {data.rating}</p>
+              <div className="mb-8 leading-relaxed flex items-center gap-2">
+                <div className="w-14 h-auto flex items-center justify-center">
+                  <img
+                    src={ImdbLogo}
+                    className="object-contain"
+                    alt="ImdbLogo"
+                  />
+                </div>
+                <p className="text-lg font-semibold">Rating: {data.rating}</p>
+              </div>
               <p className="leading-relaxed mb-4 text-lg">Reviews:</p>
               <div className="flex flex-row h-16 items-center gap-4">
                 <div
@@ -70,8 +80,12 @@ function Predict() {
                   className={`font-semibold text-center p-2 rounded text-white ${
                     data.sentiment === "Negative"
                       ? "bg-red-500"
+                      : data.sentiment === "Slightly Negative"
+                      ? "bg-red-400"
                       : data.sentiment === "Positive"
                       ? "bg-green-900"
+                      : data.sentiment === "Slightly Positive"
+                      ? "bg-green-400"
                       : "bg-blue-900"
                   }`}
                 >
