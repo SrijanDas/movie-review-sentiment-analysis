@@ -38,7 +38,7 @@ def search_movie(movie_name):
         return jsonify(data)
 
 
-@app.route('/predict/<int:movie_id>', methods=['GET'])
+@app.route('/predict/<string:movie_id>', methods=['GET'])
 def predict(movie_id):
     if request.method == 'GET':
         if tfidf is None or svc is None:
@@ -50,13 +50,13 @@ def predict(movie_id):
 
         t_movie_id = "tt"+str(movie_id)
         reviews = scrape_reviews(t_movie_id)
+
         if len(reviews) <= 0:
             abort(500)
 
         positive_count = 1
         negative_count = 1
 
-        print("\nAnalyzing review sentiments")
         for review in reviews:
             cleaned_review = clean_text(review)
             pred_vec = tfidf.transform([cleaned_review])
@@ -76,10 +76,16 @@ def predict(movie_id):
         final_sentiment = "Neutral"
 
         if pos_percentage > neg_percentage:
-            final_sentiment = "Positive"
+            if abs(50 - pos_percentage) <= 10:
+                final_sentiment = "Slightly Positive"
+            else:
+                final_sentiment = "Positive"
 
         elif neg_percentage > pos_percentage:
-            final_sentiment = "Negative"
+            if abs(50 - neg_percentage) <= 10:
+                final_sentiment = "Slightly Negative"
+            else:
+                final_sentiment = "Negative"
 
         return jsonify({'sentiment': final_sentiment,
                         'pos_percentage': str('{:04.2f}'.format(pos_percentage)),

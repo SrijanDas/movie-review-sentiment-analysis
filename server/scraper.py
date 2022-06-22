@@ -11,8 +11,5 @@ def scrape_reviews(movie_id):
     reviews = []
     for r in raw_reviews:
         reviews.append(r.text)
-    print("Scraped reviews successfully")
 
-    if len(reviews) <= 0:
-        print("Something went wrong!")
     return reviews
