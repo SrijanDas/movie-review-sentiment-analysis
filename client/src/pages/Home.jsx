@@ -7,7 +7,6 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [searchTerm, setsearchTerm] = useState("");
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -16,6 +15,12 @@ function Home() {
     await axios
       .get(`/search/${input}`)
       .then((res) => {
+        const { data } = res;
+
+        // check if api returned empty list
+        if (data.length === 0) {
+          setError(true);
+        }
         setMovies(res.data);
       })
       .catch((err) => {
@@ -24,12 +29,6 @@ function Home() {
         console.log(error);
       });
 
-    if (movies.length > 0) {
-      setsearchTerm(input);
-      setInput("");
-    } else {
-      setError(true);
-    }
     setLoading(false);
   };
 
@@ -41,9 +40,7 @@ function Home() {
         handleSubmit={handleSubmit}
         loading={loading}
       />
-      {movies.length > 0 && (
-        <SearchResults searchTerm={searchTerm} movies={movies} />
-      )}
+      {movies.length > 0 && <SearchResults movies={movies} />}
 
       {error && (
         <div className="mx-auto text-center p-4 bg-red-200 text-red-900 text-lg font-semibold rounded">
