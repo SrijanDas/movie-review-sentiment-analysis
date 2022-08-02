@@ -1,6 +1,6 @@
 # [Movie Review Sentiment Analysis](https://mrsa.netlify.app/)
 
-The program takes movie name as input then it scrapes the reviews from IMDB website and using the pretrained SVC model it predicts the sentiment of the reviews wheather it is positive or negative. After that it calculates the percentage of positive and negative reviews and upon compairing the two percentages it gives the final sentiment of that movie.
+The project takes a movie name as input then scrapes the reviews from the IMDB website and using the pre-trained SVC model it predicts the sentiment of the reviews whether it is positive or negative. After that, it calculates the percentage of positive and negative reviews and upon comparing the two percentages it gives the final sentiment of that movie. 
 
 ## Datasets
 
@@ -18,52 +18,7 @@ The program takes movie name as input then it scrapes the reviews from IMDB webs
 
 ![Webapp Screenshot2](screenshots/race3.png)
 
-### Command-line-application
-
-![App Screenshot](screenshots/positive.png)
-
-![App Screenshot2](screenshots/Figure_1.png)
-
-![App Screenshot2](screenshots/Figure_2.png)
-
 ## Run Locally
-
-The project has a `command-line-application` as well as a `webapp`.Below you can find the steps to run them both seperately.
-
-### I. Run the "Command-line-application"
-
-Clone the project
-
-```bash
-  git clone https://github.com/SrijanDas/movie-sentiment-analysis.git
-```
-
-Go to the project directory
-
-```bash
-  cd movie-sentiment-analysis
-```
-
-Go to the cmd-app directory
-
-```bash
-  cd command-line-application
-```
-
-Install dependencies
-
-```bash
-  pip install -r requirements.txt
-```
-
-Run the command-line program
-
-```bash
-  python predict.py
-```
-
-### II. Run the "Webapp"
-
 For running the webapp we need to start the backend server as well as the client server.
 
 Clone the project
