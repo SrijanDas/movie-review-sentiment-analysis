@@ -6,7 +6,7 @@ from scraper import scrape_reviews
 from model_loader import load_model
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # create an instance of the Cinemagoer class
 ia = Cinemagoer()
