@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "../axios";
+import axios from "../config/axios";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 

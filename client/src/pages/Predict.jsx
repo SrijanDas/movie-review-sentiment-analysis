@@ -1,4 +1,4 @@
-import axios from "../axios";
+import axios from "../config/axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -43,7 +43,7 @@ function Predict() {
         ) : loading ? (
           <Spinner size={10} />
         ) : (
-          <div className="container mx-auto px-5 py-6 md:py-12">
+          <div className="container max-w-7xl mx-auto px-5 py-6 md:py-12">
             <div className="flex md:flex-row flex-col items-center">
               <div className="lg:w-1/4 md:w-1/2 w-1/2 mb-10 md:mb-0">
                 <img

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import DefaultCoverImage from "../assets/default-image.jpg";
 
 function MovieListItem({ movie }) {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function MovieListItem({ movie }) {
         <img
           alt="..."
           className="flex-shrink-0 rounded-t-lg w-full h-56 object-cover object-center mb-4 "
-          src={movie.cover_url}
+          src={movie.cover_url ? movie.cover_url : DefaultCoverImage}
         />
         <div className="w-full px-2 pb-4">
           <h2 className="title-font font-medium text-lg">{movie.title}</h2>
