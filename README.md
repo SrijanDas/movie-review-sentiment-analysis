@@ -1,6 +1,6 @@
 # [Movie Review Sentiment Analysis](https://mrsa.netlify.app/)
 
-The project takes a movie name as input then scrapes the reviews from the IMDB website and using the pre-trained SVC model it predicts the sentiment of the reviews whether it is positive or negative. After that, it calculates the percentage of positive and negative reviews and upon comparing the two percentages it gives the final sentiment of that movie. 
+The project takes a movie name as input then scrapes the reviews from the IMDB website and using the pre-trained SVC model it predicts the sentiment of the reviews whether it is positive or negative. After that, it calculates the percentage of positive and negative reviews and upon comparing the two percentages it gives the final sentiment of that movie.
 
 ## Datasets
 
@@ -10,15 +10,16 @@ The project takes a movie name as input then scrapes the reviews from the IMDB w
 
 ## Screenshots
 
-### Webapp
-
 ![Webapp Screenshot](screenshots/homepage.png)
 
 ![Webapp Screenshot2](screenshots/searchResult.png)
 
-![Webapp Screenshot2](screenshots/race3.png)
+![Webapp Screenshot3](screenshots/pred.png)
 
-## Run Locally
+![Webapp Screenshot4](screenshots/race3.png)
+
+## Run Web App Locally
+
 For running the webapp we need to start the backend server as well as the client server.
 
 Clone the project
