@@ -29,13 +29,12 @@ def search_movie(movie_name):
 
         movies_data = []
         for i in range(len(movies)):
-            title = movies[i]["long imdb title"]
+            title = movies[i].get("long imdb title")
             movie_id = movies[i].movieID
-            cover_url = movies[i]["full-size cover url"]
+            cover_url = movies[i].get("full-size cover url")
             movies_data.append({"title": title, "movie_id": movie_id, "cover_url": cover_url})
 
-        data = movies_data
-        return jsonify(data)
+        return jsonify(movies_data)
 
 
 @app.route('/predict/<string:movie_id>', methods=['GET'])
