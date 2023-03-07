@@ -6,7 +6,7 @@ function About() {
   return (
     <>
       <Navbar />
-      <div className="p-10 text-center flex flex-col items-center">
+      <div className="p-10 text-center flex flex-col items-center mx-auto max-w-[1400px]">
         Made with love❤ by Srijan
         <br />
         <button

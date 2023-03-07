@@ -1,3 +1,3 @@
 window.env = {
-  "API_URL": "https://mrsa-api.up.railway.app/"
+  "API_URL": "http://localhost:5000"
 };

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <header className="text-gray-600 body-font shadow-md">
-      <div className="container flex mx-auto p-3 items-center justify-between">
+      <div className="container flex mx-auto py-3 items-center justify-between max-w-[1400px]">
         <Link to="/" className="flex title-font font-medium items-center">
           <img
             src={MovieIcon}

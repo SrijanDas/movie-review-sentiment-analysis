@@ -37,7 +37,7 @@ function Predict() {
   return (
     <>
       <Navbar />
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font max-w-[1400px] mx-auto">
         {error ? (
           <ShowError />
         ) : loading ? (
