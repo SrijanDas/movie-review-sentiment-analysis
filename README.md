@@ -10,9 +10,14 @@ The project takes a movie name as input then scrapes the reviews from the IMDB w
 
 ## Preview
 
+
+https://user-images.githubusercontent.com/53689208/223421441-685a811c-a697-41ab-b22e-bf275c39f380.mp4
+
+
 ## Run Web App Locally
 
 For running the webapp we need to start the backend server as well as the client server.
+
 
 Clone the project
 
