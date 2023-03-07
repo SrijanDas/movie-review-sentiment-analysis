@@ -8,15 +8,7 @@ The project takes a movie name as input then scrapes the reviews from the IMDB w
 
 - [IMDB Movie IDs](https://drive.google.com/drive/folders/1y9J99zxIV4jqE8e_Pp_p4R6oEARKkaXA?usp=sharing)
 
-## Screenshots
-
-![Webapp Screenshot](screenshots/homepage.png)
-
-![Webapp Screenshot2](screenshots/searchResult.png)
-
-![Webapp Screenshot3](screenshots/pred.png)
-
-![Webapp Screenshot4](screenshots/race3.png)
+## Preview
 
 ## Run Web App Locally
 
